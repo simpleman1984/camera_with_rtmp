@@ -181,7 +181,7 @@ internal class MethodCallHandlerImpl(
     }
 
     init {
-        methodChannel = MethodChannel(messenger, "plugins.flutter.io/camera_with_rtmp")
+        methodChannel = MethodChannel(messenger, "plugins.flutter.io/camera_with_rtmp_phiz")
         imageStreamChannel = EventChannel(messenger, "plugins.flutter.io/camera_with_rtmp_phiz/imageStream")
         methodChannel.setMethodCallHandler(this)
     }

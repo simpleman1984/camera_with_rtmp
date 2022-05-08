@@ -997,7 +997,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 }
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar> *)registrar {
     FlutterMethodChannel *channel =
-    [FlutterMethodChannel methodChannelWithName:@"plugins.flutter.io/camera_with_rtmp"
+    [FlutterMethodChannel methodChannelWithName:@"plugins.flutter.io/camera_with_rtmp_phiz"
                                 binaryMessenger:[registrar messenger]];
     RtmppublisherPlugin *instance = [[RtmppublisherPlugin alloc] initWithRegistry:[registrar textures]
                                                                         messenger:[registrar messenger]];
