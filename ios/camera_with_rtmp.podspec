@@ -3,7 +3,7 @@
 # Run `pod lib lint rtmppublisher.podspec' to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'camera_with_rtmp'
+  s.name             = 'camera_with_rtmp_phiz'
   s.version          = '0.0.1'
   s.summary          = 'FLutter plugin to allow rtmp to work with ios.'
   s.description      = <<-DESC

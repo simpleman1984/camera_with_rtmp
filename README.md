@@ -1,3 +1,6 @@
+# official document
+https://docs.flutter.dev/development/packages-and-plugins/developing-packages
+
 # rtmppublisher
 
 RTMP streaming and camera plugin.

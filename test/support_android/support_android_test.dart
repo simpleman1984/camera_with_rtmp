@@ -5,7 +5,7 @@
 import '../camera_testing.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:camera_with_rtmp/camera.dart';
+import 'package:camera_with_rtmp_phiz/camera.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

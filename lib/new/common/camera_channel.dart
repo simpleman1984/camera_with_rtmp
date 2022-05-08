@@ -11,7 +11,7 @@ class CameraChannel {
   static final Map<int, dynamic> callbacks = <int, CameraCallback>{};
 
   static final MethodChannel channel = const MethodChannel(
-    'flutter.plugins.io/camera_with_rtmp',
+    'flutter.plugins.io/camera_with_rtmp_phiz',
   )..setMethodCallHandler(
         (MethodCall call) async {
       assert(call.method == 'handleCallback');

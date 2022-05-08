@@ -25,7 +25,7 @@ import com.pedro.encoder.utils.CodecUtil.Force
 import com.pedro.encoder.video.FormatVideoEncoder
 import com.pedro.encoder.video.GetVideoData
 import com.pedro.rtplibrary.util.FpsListener
-import com.pedro.rtplibrary.util.RecordController
+import com.pedro.rtplibrary.util.AndroidMuxerRecordController
 import com.pedro.rtplibrary.view.GlInterface
 import com.pedro.rtplibrary.view.LightOpenGlView
 import com.pedro.rtplibrary.view.OffScreenGlThread
@@ -35,9 +35,11 @@ import java.nio.ByteBuffer
 import java.util.*
 import android.util.Log
 import android.util.SparseIntArray
+import androidx.core.app.NotificationCompat
 import com.pedro.rtmp.flv.video.ProfileIop
 import com.pedro.rtmp.rtmp.RtmpClient
 import com.pedro.rtmp.utils.ConnectCheckerRtmp
+import com.pedro.rtplibrary.base.recording.RecordController
 
 
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -51,7 +53,7 @@ class RtmpCameraConnector(val context: Context, val useOpenGL: Boolean, val isPo
     private var pausedStreaming: Boolean = false
     private var pausedRecording: Boolean = false
     private val glInterface: OffScreenGlThread = OffScreenGlThread(context)
-    private var recordController: RecordController = RecordController()
+    private var recordController: RecordController = AndroidMuxerRecordController()
 
     /**
      * Get stream state.
@@ -440,7 +442,7 @@ class RtmpCameraConnector(val context: Context, val useOpenGL: Boolean, val isPo
         if (isRecording && !pausedRecording) recordController.recordAudio(aacBuffer, info)
     }
 
-    override fun onSpsPpsVps(sps: ByteBuffer, pps: ByteBuffer, vps: ByteBuffer) {
+    override fun onSpsPpsVps(sps: ByteBuffer, pps: ByteBuffer, vps: ByteBuffer?) {
         if (isStreaming && !pausedStreaming) onSpsPpsVpsRtp(sps, pps, vps)
     }
 
@@ -510,7 +512,7 @@ class RtmpCameraConnector(val context: Context, val useOpenGL: Boolean, val isPo
     }
 
     override fun onConnectionStartedRtmp(rtmpUrl: String) {
-        TODO("Not yet implemented")
+//        connectChecker.onConnectionStartedRtmp(rtmpUrl);
     }
 
     companion object {

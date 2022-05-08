@@ -2,8 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:camera_with_rtmp/camera.dart';
-import 'package:camera_with_rtmp/new/common/native_texture.dart';
+import 'package:camera_with_rtmp_phiz/camera.dart';
+import 'package:camera_with_rtmp_phiz/new/common/native_texture.dart';
 import 'package:mockito/mockito.dart';
 
 import 'camera_testing.dart';

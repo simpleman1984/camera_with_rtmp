@@ -219,6 +219,7 @@ class VideoEncoder(
             getVideoData.onSpsPpsVps(byteBufferList!![1], byteBufferList[2], byteBufferList[0])
             //H264
         } else {
+            System.err.println("sendSPSandPPS  ->" + getVideoData.toString())
             getVideoData.onSpsPpsVps(mediaFormat.getByteBuffer("csd-0"), mediaFormat.getByteBuffer("csd-1"),null)
         }
     }

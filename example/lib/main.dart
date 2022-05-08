@@ -7,7 +7,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:camera_with_rtmp/camera.dart';
+import 'package:camera_with_rtmp_phiz/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:video_player/video_player.dart';
@@ -47,7 +47,7 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
   bool enableAudio = true;
   bool useOpenGL = true;
   TextEditingController _textFieldController = TextEditingController(
-      text: "rtmp://34.70.40.166:1935/LiveApp/544303451528289906710851");
+      text: "rtmp://143.244.185.204:1935/LiveApp/544303451528289906710851");
 
   Timer _timer;
 

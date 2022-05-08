@@ -4,7 +4,7 @@
 
 import 'dart:async';
 
-import 'package:camera_with_rtmp/camera.dart';
+import 'package:camera_with_rtmp_phiz/camera.dart';
 
 import 'camera_channel.dart';
 import 'camera_mixins.dart';

@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:ui';
 
-import 'package:camera_with_rtmp/camera.dart';
+import 'package:camera_with_rtmp_phiz/camera.dart';
 import 'package:e2e/e2e.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_test/flutter_test.dart';
