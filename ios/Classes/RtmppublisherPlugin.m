@@ -1,11 +1,11 @@
 #import "RtmppublisherPlugin.h"
-#if __has_include("camera_with_rtmp/camera_with_rtmp-Swift.h")
-#import <camera_with_rtmp/camera_with_rtmp-Swift.h>
+#if __has_include("camera_with_rtmp_phiz/camera_with_rtmp_phiz-Swift.h")
+#import <camera_with_rtmp_phiz/camera_with_rtmp_phiz-Swift.h>
 #else
 // Support project import fallback if the generated compatibility header
 // is not copied when this plugin is created as a library.
 // https://forums.swift.org/t/swift-static-libraries-dont-copy-generated-objective-c-header/19816
-#import "camera_with_rtmp-Swift.h"
+#import "camera_with_rtmp_phiz-Swift.h"
 #endif
 
 #import <AVFoundation/AVFoundation.h>
@@ -848,7 +848,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 - (void)startImageStreamWithMessenger:(NSObject<FlutterBinaryMessenger> *)messenger {
     if (!_isStreamingImages) {
         FlutterEventChannel *eventChannel =
-        [FlutterEventChannel eventChannelWithName:@"plugins.flutter.io/camera_with_rtmp/imageStream"
+        [FlutterEventChannel eventChannelWithName:@"plugins.flutter.io/camera_with_rtmp_phiz/imageStream"
                                   binaryMessenger:messenger];
         
         _imageStreamHandler = [[FLTImageStreamHandler alloc] init];
@@ -1078,7 +1078,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
             };
             FlutterEventChannel *eventChannel = [FlutterEventChannel
                                                  eventChannelWithName:[NSString
-                                                                       stringWithFormat:@"plugins.flutter.io/camera_with_rtmp/cameraEvents%lld",
+                                                                       stringWithFormat:@"plugins.flutter.io/camera_with_rtmp_phiz/cameraEvents%lld",
                                                                        textureId]
                                                  binaryMessenger:_messenger];
             [eventChannel setStreamHandler:cam];
