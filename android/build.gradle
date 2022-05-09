@@ -48,9 +48,10 @@ android {
 dependencies {
     implementation 'androidx.annotation:annotation:1.2.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'flutter:flutter:0.0.7'
+    // implementation 'flutter:flutter:0.0.7'
     // implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:1.8.2'
     // implementation project(':rtplibrary')
-    debugImplementation fileTree(dir: 'libs', include: ['*-debug.aar'])
-    releaseImplementation fileTree(dir: 'libs', include: ['*-release.aar'])
+    // debugImplementation fileTree(dir: 'libs', include: ['*-debug.aar'])
+    // releaseImplementation fileTree(dir: 'libs', include: ['*-release.aar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
