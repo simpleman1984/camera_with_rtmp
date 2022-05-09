@@ -25,6 +25,13 @@ android {
 
 afterEvaluate {
   publishing {
+    repositories {
+      // Local repository which we can first publish in it to check artifacts
+      maven {
+        name = "LocalTestRepo"
+        url = uri("file://${buildDir}/local-repository")
+      }
+    }
     publications {
       // Creates a Maven publication called "release".
       release(MavenPublication) {
