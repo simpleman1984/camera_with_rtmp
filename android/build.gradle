@@ -50,5 +50,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'flutter:flutter:0.0.7'
     // implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:1.8.2'
-    implementation project(':rtplibrary')
+    // implementation project(':rtplibrary')
+    debugImplementation fileTree(dir: 'libs', include: ['*-debug.aar'])
+    releaseImplementation fileTree(dir: 'libs', include: ['*-release.aar'])
 }
