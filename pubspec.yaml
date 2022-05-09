@@ -1,6 +1,6 @@
 name: camera_with_rtmp_phiz
 description: Controlling the camera on Android and iOS plus rtmp live streaming support. Based off the Camera plugin.
-version: 3.0.0
+version: 3.0.1
 homepage: https://github.com/simpleman1984/camera_with_rtmp
 
 environment:
