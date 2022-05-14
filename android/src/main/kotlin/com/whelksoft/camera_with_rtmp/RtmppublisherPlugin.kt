@@ -43,7 +43,7 @@ public class RtmppublisherPlugin : FlutterPlugin, ActivityAware {
         fun registerWith(registrar: Registrar) {
             val plugin = RtmppublisherPlugin();
             plugin.maybeStartListening(
-                    registrar.activity(),
+                    registrar.activity()!!,
                     registrar.messenger(),
                     object : PermissionStuff {
                         override fun adddListener(listener: PluginRegistry.RequestPermissionsResultListener) {
@@ -97,7 +97,7 @@ public class RtmppublisherPlugin : FlutterPlugin, ActivityAware {
 
                 },
 
-                flutterPluginBinding!!.flutterEngine.renderer
+                flutterPluginBinding!!.textureRegistry
         )
     }
 

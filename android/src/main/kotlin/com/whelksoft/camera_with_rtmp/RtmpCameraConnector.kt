@@ -40,7 +40,7 @@ import com.pedro.rtmp.flv.video.ProfileIop
 import com.pedro.rtmp.rtmp.RtmpClient
 import com.pedro.rtmp.utils.ConnectCheckerRtmp
 import com.pedro.rtplibrary.base.recording.RecordController
-
+import java.lang.Exception
 
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 class RtmpCameraConnector(val context: Context, val useOpenGL: Boolean, val isPortrait: Boolean, val connectChecker: ConnectCheckerRtmp) :
@@ -256,7 +256,11 @@ class RtmpCameraConnector(val context: Context, val useOpenGL: Boolean, val isPo
      */
     fun stopStream() {
         isStreaming = false
-        stopStreamRtp()
+        try{
+            stopStreamRtp()
+        } catch (e: Exception) {
+            Log.i(TAG, "stopStreamRtp exception => " + e.);
+        }
         if (!isRecording) {
             microphoneManager!!.stop()
             videoEncoder!!.stop()

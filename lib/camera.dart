@@ -848,7 +848,7 @@ class CameraController extends ValueNotifier<CameraValue> {
       );
     }
     try {
-      value = value.copyWith(isStreamingVideoRtmp: false);
+      value = value.copyWith();
       if (value.isRecordingVideo || value.isStreamingVideoRtmp) {
         value = value.copyWith(
             isRecordingVideo: false, isStreamingVideoRtmp: false);
