@@ -259,7 +259,7 @@ class RtmpCameraConnector(val context: Context, val useOpenGL: Boolean, val isPo
         try{
             stopStreamRtp()
         } catch (e: Exception) {
-            Log.i(TAG, "stopStreamRtp exception => " + e.);
+            Log.i(TAG, "stopStreamRtp exception => " + e.message);
         }
         if (!isRecording) {
             microphoneManager!!.stop()
